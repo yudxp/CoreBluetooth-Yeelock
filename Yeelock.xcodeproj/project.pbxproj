@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156EC116293C48C20099EFA3 /* CBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EC115293C48C20099EFA3 /* CBManager.swift */; };
+		156EC118293C48E10099EFA3 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EC117293C48E10099EFA3 /* DeviceManager.swift */; };
+		156EC11A293C4BE00099EFA3 /* PacketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EC119293C4BE00099EFA3 /* PacketManager.swift */; };
+		156EC11F293C536B0099EFA3 /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EC11E293C536B0099EFA3 /* UDManager.swift */; };
 		157E9F262929401500BCAD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E9F252929401500BCAD16 /* AppDelegate.swift */; };
 		157E9F282929401500BCAD16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E9F272929401500BCAD16 /* SceneDelegate.swift */; };
 		157E9F2A2929401500BCAD16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E9F292929401500BCAD16 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		156EC115293C48C20099EFA3 /* CBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBManager.swift; sourceTree = "<group>"; };
+		156EC117293C48E10099EFA3 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		156EC119293C4BE00099EFA3 /* PacketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketManager.swift; sourceTree = "<group>"; };
+		156EC11E293C536B0099EFA3 /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		157E9F222929401500BCAD16 /* Yeelock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yeelock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157E9F252929401500BCAD16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157E9F272929401500BCAD16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		156EC114293C48950099EFA3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				156EC115293C48C20099EFA3 /* CBManager.swift */,
+				156EC119293C4BE00099EFA3 /* PacketManager.swift */,
+				156EC117293C48E10099EFA3 /* DeviceManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		156EC11B293C530E0099EFA3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				156EC11E293C536B0099EFA3 /* UDManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		157E9F192929401500BCAD16 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +85,8 @@
 				157E9F252929401500BCAD16 /* AppDelegate.swift */,
 				157E9F272929401500BCAD16 /* SceneDelegate.swift */,
 				157E9F292929401500BCAD16 /* ViewController.swift */,
+				156EC11B293C530E0099EFA3 /* Utilities */,
+				156EC114293C48950099EFA3 /* Network */,
 				157E9F2B2929401500BCAD16 /* Main.storyboard */,
 				157E9F2E2929401700BCAD16 /* Assets.xcassets */,
 				157E9F302929401700BCAD16 /* LaunchScreen.storyboard */,
@@ -83,6 +111,8 @@
 			dependencies = (
 			);
 			name = Yeelock;
+			packageProductDependencies = (
+			);
 			productName = Yeelock;
 			productReference = 157E9F222929401500BCAD16 /* Yeelock.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,8 @@
 				Base,
 			);
 			mainGroup = 157E9F192929401500BCAD16;
+			packageReferences = (
+			);
 			productRefGroup = 157E9F232929401500BCAD16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156EC11F293C536B0099EFA3 /* UDManager.swift in Sources */,
+				156EC118293C48E10099EFA3 /* DeviceManager.swift in Sources */,
 				157E9F2A2929401500BCAD16 /* ViewController.swift in Sources */,
 				157E9F262929401500BCAD16 /* AppDelegate.swift in Sources */,
+				156EC11A293C4BE00099EFA3 /* PacketManager.swift in Sources */,
 				157E9F282929401500BCAD16 /* SceneDelegate.swift in Sources */,
+				156EC116293C48C20099EFA3 /* CBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +326,15 @@
 				DEVELOPMENT_TEAM = SLXHN25QU8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yeelock/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "enable to connect devices";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +358,15 @@
 				DEVELOPMENT_TEAM = SLXHN25QU8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yeelock/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "enable to connect devices";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
